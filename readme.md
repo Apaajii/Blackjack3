@@ -67,5 +67,16 @@ Jag började skriva min nya kod med "Import random". Modulen "random" är inbygg
 
 För att få mitt spel att fungera så var jag tvungen att skapa en kortlek. För att få det att fungera så använde jag mig av "def create_deck():". Med detta så definerar jag helt enkelt en funktion med namnet "create_deck()". Det denna funktionen gör att det ansvarar för att skapa en ny kortlek. Jag använder även en funktion för att organisera koden och göra den mer läsbar för mig själv. Det tillåter mig även återanvända koden för att skapa en ny kortlek varje gång jag behöver det. En kortlek innehåller 52st kort med 4 olika sviter eller "suits". För att mitt spel ska fungera så skapade jag en lista med alla fyra sviter som finns i en kortlek, "suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']". 
 
-Eftersom att värdet på korten i en kortlek går från 2-A så behövde jag 
+Eftersom att värdet på korten i en kortlek går från 2-A så behövde jag lägga till "ranks" som innehåller alla rankningar från 2-A för att skapa en komplett kortlek. 
+
+Nu har jag kodat in sviterna och dom olika rankingarna av korten för sig men för att det ska bli en komplett kortlek och så att varje svit ska kunna kombineras med varje rank så använder jag mig av "deck = [(rank, suit) for rank in ranks for suit in suits]". Jag kombinerar alltså rankingar och sviter för att repsresentera varje krot i min kortlek. Jag använder detta istället för att använda loppar eller andra metoder för att skapa en kortlek, med hjälp av denna kod så bildas det en slags listkomprehension som är lätt och enkel att förstå. 
+
+Nu när jag har skapat min kortlek så behöver jag något som gör så att den blandas slumpmässigt och därför använder jag "random.shuffle(deck)" för att vara säker på att alla kort är helt blandade och även kommer upp slumpmässigt. 
+
+I slutet av min funktion för att skapa en kortlek så behöver jag en funktion som returnerar den skapade och blandade kortleken och därför anväder jag "return deck" så att jag kan använda mig kortlek i resten av programmet för att dela ut kort till mig och dealern. 
+
+
+
+
+
 
