@@ -1,6 +1,6 @@
 import random
 
-# Funktion för att skapa en kortlek
+
 def create_deck():
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -8,7 +8,7 @@ def create_deck():
     random.shuffle(deck)
     return deck
 
-# Funktion för att räkna ut totalvärdet av en hand
+
 def calculate_hand_value(hand):
     value = 0
     num_aces = 0
@@ -26,13 +26,13 @@ def calculate_hand_value(hand):
         num_aces -= 1
     return value
 
-# Funktion för att visa handen
+
 def display_hand(hand, player):
     print(f"{player}'s Hand:")
     for card in hand:
         print(card[0])
 
-# Spellogik för Blackjack
+
 def play_blackjack():
     while True:
         deck = create_deck()
