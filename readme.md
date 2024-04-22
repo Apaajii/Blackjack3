@@ -63,6 +63,9 @@ for suit in ['Hearts', 'Diamonds', 'Clubs', 'Spades']:
 Trots att detta inte fungerade så har jag ändå lärt mig väldigt mycket om hur man ska koda gällande kortspel och hur själva konceptet ser ut, jag har lärt mig hur helheten fungerar.
 
 
+Jag började skriva min nya kod med "Import random". Modulen "random" är inbyggd i python och används helt enkelt för att kunna generera tal som är slumpässiga och även listor. Men jag anväder den för att kunna skapa och blanda en kortlek i mitt Blackjack spel. 
 
+För att få mitt spel att fungera så var jag tvungen att skapa en kortlek. För att få det att fungera så använde jag mig av "def create_deck():". Med detta så definerar jag helt enkelt en funktion med namnet "create_deck()". Det denna funktionen gör att det ansvarar för att skapa en ny kortlek. Jag använder även en funktion för att organisera koden och göra den mer läsbar för mig själv. Det tillåter mig även återanvända koden för att skapa en ny kortlek varje gång jag behöver det. En kortlek innehåller 52st kort med 4 olika sviter eller "suits". För att mitt spel ska fungera så skapade jag en lista med alla fyra sviter som finns i en kortlek, "suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']". 
 
+Eftersom att värdet på korten i en kortlek går från 2-A så behövde jag 
 

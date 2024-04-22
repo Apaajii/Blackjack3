@@ -42,3 +42,5 @@ def play_blackjack():
 # Starta spelet
 play_blackjack()
 
+
+
