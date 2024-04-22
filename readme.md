@@ -73,7 +73,8 @@ Nu har jag kodat in sviterna och dom olika rankingarna av korten för sig men f�
 
 Nu när jag har skapat min kortlek så behöver jag något som gör så att den blandas slumpmässigt och därför använder jag "random.shuffle(deck)" för att vara säker på att alla kort är helt blandade och även kommer upp slumpmässigt. 
 
-I slutet av min funktion för att skapa en kortlek så behöver jag en funktion som returnerar den skapade och blandade kortleken och därför anväder jag "return deck" så att jag kan använda mig kortlek i resten av programmet för att dela ut kort till mig och dealern. 
+I slutet av min funktion för att skapa en kortlek så behöver jag en funktion som returnerar min skapade och blandade kortleken och därför anväder jag "return deck" så att jag kan använda min kortlek i resten av programmet för att dela ut kort till mig och dealern. 
+
 
 
 
