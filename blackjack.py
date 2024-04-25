@@ -34,7 +34,7 @@ def display_hand(hand, player):
 
 
 def play_blackjack():
-    while True:
+    while true:
         deck = create_deck()
         player_hand = [deck.pop(), deck.pop()]
         dealer_hand = [deck.pop(), deck.pop()]

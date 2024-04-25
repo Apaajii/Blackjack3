@@ -75,6 +75,34 @@ Nu när jag har skapat min kortlek så behöver jag något som gör så att den 
 
 I slutet av min funktion för att skapa en kortlek så behöver jag en funktion som returnerar min skapade och blandade kortleken och därför anväder jag "return deck" så att jag kan använda min kortlek i resten av programmet för att dela ut kort till mig och dealern. 
 
+Ett av mina mål nu för kommande veckor var att jag behövde skapa en funktion som kunde beräkna mitt värde för varje hand som jag spelade. För att lösa detta så använde jag mig av "def calculate_hand_value(hand):". Sen la jag till 2 st variabler "Value" och "num_aces" och initerade båda till 0. Enkelt förklarat så ger "value" det totala värdet av handen och "num_aces" håller koll på antalet ess i handen vilket är extra viktigt eftersom att ess kan ha värde 1 och 11 beroende på situation i handen. 
+
+För att enkelt förkalra hur funktionen fungerar så kan vi säga att om jag har följade hand, hand = [('A', 'Spades'), ('6', 'Hearts'), ('J', 'Diamonds')] 
+
+Jag börjar med att ge value till 0 och num_aces till 0.
+För varje kort i handen:
+För det första kortet ('A', 'Spades'):
+rank = 'A', eftersom 'A' är den första delen av kortet.
+Eftersom rank är 'A', lägger vi jag 11 till value och ökar num_aces till 1.
+För det andra kortet ('6', 'Hearts'):
+rank = '6'.
+Jag lägger till 6 till value.
+För det tredje kortet ('J', 'Diamonds'):
+rank = 'J'.
+
+Eftersom rank är en klättkort ('J', 'Q', 'K'), lägger jag till 10 till value.
+Nu är value 11 (från esset) + 6 (från sexan) + 10 (från klättkortet) = 27.
+Jag går sen in i loopen eftersom value är större än 21 och num_aces är 1.
+I loopen tar jag bort 10 från value vilket ändrar essets värde från 11 till 1.
+value blir nu 17 och num_aces minskas till 0.
+Eftersom value nu är 17 som är mindre än 21 och jag inte har fler ess kvar så avslutas loopen.
+
+
+
+
+
+
+
 
 
 
