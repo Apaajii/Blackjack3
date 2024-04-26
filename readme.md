@@ -13,7 +13,7 @@ Mitt andra mål inför de kommande veckorna är att börja skriva koden vilket j
 
 Mitt andra mål för de kommande veckorna var att jag skulle kunna se mina kort och dealerns som man kunde se visuellt på pygame och sen skulle jag även skapa en funktion för att kunna skapa en kortlek. Jag använde mig av cards_images = {}: För att skapa en tom dictionary som kommer användas för att lagra laddade kortbilder som jag kommer lägga in som man kommer att se visuellt i pygame. jag hade väldigt mycket problem med att.
 
-Efter ett tag och väldigt mycket problem med pygame med att mina bilder på 52 st kort med alla valörer och kläda kort inte kunde hittas "No file '7_of_Clubs.png.jpg' found in working directory 'C:\BlackJack'.
+    Efter ett tag och väldigt mycket problem med pygame med att mina bilder på 52 st kort med alla valörer och kläda kort inte kunde hittas "No file '7_of_Clubs.png.jpg' found in working directory 'C:\BlackJack'.
 PS C:\BlackJack> " så gav jag upp på pygame, jag satt med min mentor och kenneth i flera lektioner och försökte att lösa det och dom hade också svårt att förstå vad som var fel, vi ändrade om jättemycket i min kod "suits" och ändrade filen från ".png" till ".png.jpg" för att det skulle matcha mina bilder jag laddade ner till pygame. Christoffer la även till lite kod som jag inte riktigt förstod varför han gjorde men han skulle ändra lite värden till "x" och "xy" för att se om det fungerade, hans kod var följande:
 
 x = random.randint(0,3)
@@ -96,6 +96,14 @@ Jag går sen in i loopen eftersom value är större än 21 och num_aces är 1.
 I loopen tar jag bort 10 från value vilket ändrar essets värde från 11 till 1.
 value blir nu 17 och num_aces minskas till 0.
 Eftersom value nu är 17 som är mindre än 21 och jag inte har fler ess kvar så avslutas loopen.
+
+Nu när jag hade skapat en kortlek och skapat en funktion som kan beräkna värdet för varje hand så behövde jag en funktion som visade mina händer i blackjack, alltså så att när jag kör spelet så ska det komma upp siffror på dealerns hand och min hand. För detta så använder jag mig av "def display_hand(hand, player):" där variablen "hand" ska vara en lista med kort och variabeln  "player" som ska vara namnet på spelarens hand som ska visas. För att printa ut namnet på spelaren som är följt av en f sträng "s Hand:". Jag använder denna strängen för att enkelt kunna inkludera värdet av variabeln "player" i strängen. 
+
+Sen behövde jag skapa en loop som upprepas över varje kort i variablen "hand" och då använde jag "for card in hand:" och sedan "print(card[0])" som i själva loopen skriver ut rangen på varje kort i skärmen enkelt och kort förklarat. 
+
+
+
+
 
 
 
