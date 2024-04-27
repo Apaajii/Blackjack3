@@ -44,6 +44,8 @@ def play_blackjack():
         print(dealer_hand[0][0])
         print("\nYour Hand:")
         for card in player_hand:
+            print(card[0])
+            print("\n")
 
 
 # Starta spelet
