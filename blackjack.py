@@ -39,6 +39,13 @@ def play_blackjack():
         player_hand = [deck.pop(), deck.pop()]
         dealer_hand = [deck.pop(), deck.pop()]
 
+        
+        print("Dealer's hand:")
+        print(dealer_hand[0][0])
+        print("\nYour Hand:")
+        for card in player_hand:
+
+
 # Starta spelet
 play_blackjack()
 
