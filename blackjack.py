@@ -1,6 +1,7 @@
 import random
 
 
+# Funktion för att skapa en kortlek
 def create_deck():
     suits = ['Hearts', 'Diamonds', 'Clubs', 'Spades']
     ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
@@ -9,6 +10,7 @@ def create_deck():
     return deck
 
 
+# Funktion för att räkna ut totalvärdet av min hand
 def calculate_hand_value(hand):
     value = 0
     num_aces = 0
@@ -27,29 +29,50 @@ def calculate_hand_value(hand):
     return value
 
 
+# Funktion för att visa handen
 def display_hand(hand, player):
     print(f"{player}'s Hand:")
     for card in hand:
         print(card[0])
 
 
+# Spellogik för Blackjack
 def play_blackjack():
     while true:
         deck = create_deck()
         player_hand = [deck.pop(), deck.pop()]
         dealer_hand = [deck.pop(), deck.pop()]
 
-        
+
+         # Visa spelarens första kort och alla dealerens kort
         print("Dealer's hand:")
         print(dealer_hand[0][0])
-        print("\nYour Hand:")
+        print("Your Hand:")
         for card in player_hand:
             print(card[0])
-            print("\n")
+            
+            # Spelaren hit eller stand
+            while calculate_hand_value(player_hand) < 21:
+                action = input ("Do you want to hit or stand? h/s: "). lower()
+                if action == 'h':
+                    player_hand.append(deck.pop())
+                    print("Your hand:")
+                    for card in player_hand:
+                    print(card[0])
+
+
 
 
 # Starta spelet
 play_blackjack()
+
+
+
+
+
+
+
+
 
 
 
