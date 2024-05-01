@@ -58,11 +58,15 @@ def play_blackjack():
                     player_hand.append(deck.pop())
                     print("Your hand:")
                     for card in player_hand:
-                    print(card[0])
+                        print(card[0])
+               elif action == 's':
+                   break
+               else:
+                   print("Invalid input! Please enter 'h' to hit or 's' to stand.") to
+               stand.")
 
 
-
-
+                        
 # Starta spelet
 play_blackjack()
 

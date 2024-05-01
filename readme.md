@@ -103,7 +103,10 @@ Sen behövde jag skapa en loop som upprepas över varje kort i variablen "hand" 
 
 För att det skulle bli ett logiskt blackjack spel och en huvudfuktion för att spela blackjack som resten av min kod skulle förstå så skapade jag en funktion med namnet "play_blackjack" och sedan skapade jag en loop funktion där "while" är det själva nyckelordet som innebär att den kommer upprepa ett block av kod så länge ett visst villkor är sant och det är därför jag använder "true". Detta innebär att loopen kommer att forstätta föralltid tills den bryts av ett annat villkor. 
  
- I loopen så skapas det en ny kortlek med "deck = create_deck()" och sedan så delas det ut 2st kort till spelaren och dealern genom att ta bort de två översta korten från kortleken med "player_hand = [deck.pop(), deck.pop()]" och "dealer_hand = [deck.pop(), deck.pop()]"
+ I loopen så skapas det en ny kortlek med "deck = create_deck()" och sedan så delas det ut 2st kort till spelaren och dealern genom att ta bort de två översta korten från kortleken med "player_hand = [deck.pop(), deck.pop()]" och "dealer_hand = [deck.pop(), deck.pop()]".
+
+
+
 
 
 
