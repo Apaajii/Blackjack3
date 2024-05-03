@@ -66,6 +66,21 @@ def play_blackjack():
                stand.")
 
 
+               #Dealer Bust
+                if calculate_hand_value(player_hand) > 21:
+                   print ("Bust! Du förlorade.")
+                   else:
+                        
+                        #Dealer hit
+                        while calculate_hand_value(dealer_hand) < 17:
+                               dealer_hand.append(deck.pop())
+                        print ("Dealer's Hand:")   
+                        for card in dealer_hand:
+                            print (card[0])
+  
+                       
+
+
                         
 # Starta spelet
 play_blackjack()
