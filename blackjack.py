@@ -80,6 +80,9 @@ def play_blackjack():
 
                             #Resultat
                             player_score = calculate_hand_value(player_hand)
+                            dealer_score = calculate_hand_value(dealer_hand)
+                            if player_score > dealer_score or dealer_score  > 21:
+                                print ("Du vann!")
   
                        
 
