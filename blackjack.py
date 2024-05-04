@@ -77,6 +77,9 @@ def play_blackjack():
                         print ("Dealer's Hand:")   
                         for card in dealer_hand:
                             print (card[0])
+
+                            #Resultat
+                            player_score = calculate_hand_value(player_hand)
   
                        
 
