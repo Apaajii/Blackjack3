@@ -45,9 +45,9 @@ def play_blackjack():
 
 
          # Visa spelarens första kort och alla dealerens kort
-        print("Dealer's hand:")
+        print("Dealern hand:")
         print(dealer_hand[0][0])
-        print("Your Hand:")
+        print("Din hand:")
         for card in player_hand:
             print(card[0])
             
@@ -56,20 +56,20 @@ def play_blackjack():
                 action = input ("Do you want to hit or stand? h/s: "). lower()
                 if action == 'h':
                     player_hand.append(deck.pop())
-                    print("Your hand:")
+                    print("Din hand:")
                     for card in player_hand:
                         print(card[0])
-               elif action == 's':
-                   break
-               else:
-                   print("Invalid input! Please enter 'h' to hit or 's' to stand.") to
-               stand.")
+                elif action == 's':
+                    break
+                else:
+                    print("Invalid input! Var snäll och välj 'h' för hit eller 's' för stand.", 
+                    " to stand.")
 
 
                #Dealer Bust
                 if calculate_hand_value(player_hand) > 21:
                    print ("Bust! Du förlorade.")
-                   else:
+                else:
                         
                         #Dealer hit
                         while calculate_hand_value(dealer_hand) < 17:
