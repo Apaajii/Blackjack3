@@ -101,9 +101,34 @@ Nu när jag hade skapat en kortlek och skapat en funktion som kan beräkna värd
 
 Sen behövde jag skapa en loop som upprepas över varje kort i variablen "hand" och då använde jag "for card in hand:" och sedan "print(card[0])" som i själva loopen skriver ut rangen på varje kort i skärmen enkelt och kort förklarat. 
 
-För att det skulle bli ett logiskt blackjack spel och en huvudfuktion för att spela blackjack som resten av min kod skulle förstå så skapade jag en funktion med namnet "play_blackjack" och sedan skapade jag en loop funktion där "while" är det själva nyckelordet som innebär att den kommer upprepa ett block av kod så länge ett visst villkor är sant och det är därför jag använder "true". Detta innebär att loopen kommer att forstätta föralltid tills den bryts av ett annat villkor. 
+För att det skulle bli ett logiskt blackjack spel och en huvudfuktion för att spela blackjack som  resten av min kod skulle förstå så skapade jag en funktion med namnet "play_blackjack" och sedan skapade jag en loop funktion där "while" är det själva nyckelordet som innebär att den kommer upprepa ett block av kod så länge ett visst villkor är sant och det är därför jag använder "true". Detta innebär att loopen kommer att forstätta föralltid tills den bryts av ett annat villkor. 
  
  I loopen så skapas det en ny kortlek med "deck = create_deck()" och sedan så delas det ut 2st kort till spelaren och dealern genom att ta bort de två översta korten från kortleken med "player_hand = [deck.pop(), deck.pop()]" och "dealer_hand = [deck.pop(), deck.pop()]".
+
+För att kunna printa ut i och se visuellt vad för kort spelaren och dealern har så använder jag "print (":") , i detta fallet använde jag print"("Dealern hand:") som berättar att följande text kommer att vara information om dealerns hand.
+
+print(dealer_hand[0][0]) använder jag för att här så skrivs det förstsa kortet i dealerns hand ut. Det betyder enkelt förklarat att "dealer_hand" är en lista över kort och varje kort är liksom en lista i sig själv där det första elementet är värdet på kortet och det andra elementet är kortets svit. Detta betyder då att (dealer_hand[0][0]) referar liksom till första kortets värde.
+
+"for card in player_hand:
+            print(card[0])". Detta är en for loop som jag skapade för att koden ska kunna gå igenom varje kort i spelarens hand, därför står det "player_hand". Detta betyder att för varje kort så skriver den ut värdet. Detta betyder då "player_hand" är också en lista på kort på samma sätt som det var i "dealer_hand". Och varje kort har ett värde vilket då är det första elementet i dess egen inre lista. 
+
+            Jag insåg efter ett tag av tänkande och en del youtube att jag behöver skapa while loop som tar hand den som spelar varje drag. Alltså där spelaren får välja hit eller stand baserat på vilket värde som korten visar att deras hand är. 
+
+            Fär att detta ska fungera så använde jag mig av "while calculate_hand_value(player_hand) < 21:" som enkelt förklarat kör koden så länge som värdet av spelarens hand är mindre än 21. 
+
+            För att koden ska kunna be spelaren om man vill ta ett kort eller stanna så så behövde den be om en "input" av spelaren. Därför använde jag "action = input ("Do you want to hit or stand? h/s: "). lower()" 
+
+            Sedan behövde jag en kod som utför några funktioner om spelaren väljer att ta ett kort, då använde jag "if action == 'h':". Sedan behövde jag skriva ut vad som sker när spelaren väljer att ta ett kort, player_hand.append(deck.pop()): Ett kort tas från kortleken (deck) med pop() och läggs till i spelarens hand.
+            print("Din hand:"): En utskrift som visar att splarens hand kommer att visas.
+            Sedan används en for loop för att skriva ut varje kort i spelarens hand.
+
+            Om spelaren väljer att stanna däremot så bryts loopen med "break" eftersom att man inte vill ta fler kort, för detta använde jag "elif action == 's':
+                    break". Och om spelaren skulle skriva in något annat än "h" eller "s" så kommer det upp ett felmeddelande tack vare "else" där det står "print("Invalid input! Var snäll och välj 'h' för hit eller 's' för stand.", 
+                    " to stand.")". Jag hade väldigt mycket problem med att få denna koden att fungera, det tog lång tid men tillslut fungerade det. 
+
+                    
+
+
 
 
 
