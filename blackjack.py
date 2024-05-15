@@ -85,7 +85,11 @@ def play_blackjack():
                             elif player_score < dealer_score:
                                 print ("Dealern vinner!")
                             else:
-                                print ("Det blev lika!")   
+                                print ("Det blev lika!")  
+
+                                play_again = input ("Vill du spela igen? (Ja/Nej):") .lower()
+                                if play_again != 'Ja':
+                                    break
   
                        
 
