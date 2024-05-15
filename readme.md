@@ -126,7 +126,32 @@ print(dealer_hand[0][0]) använder jag för att här så skrivs det förstsa kor
                     break". Och om spelaren skulle skriva in något annat än "h" eller "s" så kommer det upp ett felmeddelande tack vare "else" där det står "print("Invalid input! Var snäll och välj 'h' för hit eller 's' för stand.", 
                     " to stand.")". Jag hade väldigt mycket problem med att få denna koden att fungera, det tog lång tid men tillslut fungerade det. 
 
+                    Nu behövde jag en kod för att sätta upp regler för dealern om hur han ska ta osv och när han ska stanna om handvärdet är 17 och att han ska ta ett ytterligare kort om handen är under 17. 
                     
+                    if calculate_hand_value(player_hand) > 21:: Denna rad gör en villkorssats av (if-sats) som kontrollerar om summan av kortvärdena i spelarens hand kommer över 21.
+
+print("Bust! Du förlora."): Om villkoret i rad 1 är sant vilket betyder om summan av kortvärdena i spelarens hand överstiger 21 så skrivs meddelandet "Bust! Du förlora." ut på skärmen. Detta informerar spelaren om att de har "gått bust", vilket innebär att de har förlorat spelet eftersom deras handvärde är för högt.
+
+else:: Om villkoret i rad 1 inte är sant vilket innebär att summan av kortvärdena i spelarens hand är 21 eller mindre så fortsätter koden till det här blocket av kod.
+
+while calculate_hand_value(dealer_hand) < 17:: Denna rad visar på en en while-loop som körs så länge summan av kortvärdena i dealerns hand är mindre än 17.
+
+dealer_hand.append(deck.pop()): Inuti while-loopen läggs ett nytt kort till dealerns hand från kortleken (deck) genom att använda deck.pop(). Detta representerar "hit" -aktionen för dealern där de tar ytterligare kort så länge deras handvärde är under 17.
+
+print("Dealers Hand:"): Efter att dealern har avslutat sin tur att dra kort så skrivs "Dealers Hand:" 
+
+for card in dealer_hand:: Denna rad initierar en for-loop som upprepar genom varje kort i dealerns hand.
+
+print(card[0]): Inuti loopen skrivs värdet på varje kort i dealerns hand ut, detta visar spelaren dealerns hand.
+
+Jag skrev denna kod för att vara säker på att dealern ska agera och spela enligt reglerna och så att det ska vara en jämn spel upplevelse för den/dom som spelar. Detta gör liksom så att man kan spela mer strategiskt baserat på vilka kort man själv har och vilka kort dealern har. 
+
+
+
+
+
+                    
+
 
 
 
