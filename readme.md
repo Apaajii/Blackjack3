@@ -146,6 +146,30 @@ print(card[0]): Inuti loopen skrivs värdet på varje kort i dealerns hand ut, d
 
 Jag skrev denna kod för att vara säker på att dealern ska agera och spela enligt reglerna och så att det ska vara en jämn spel upplevelse för den/dom som spelar. Detta gör liksom så att man kan spela mer strategiskt baserat på vilka kort man själv har och vilka kort dealern har. 
 
+Nu behövde jag få in kod som visade resultat för eller värdet för både spelaren och dealerns händer för att kunna avgöra vem som vinner. 
+
+Jag använde mig av: if player_score > dealer_score or dealer_score > 21:
+                print("Du vinner!")
+            elif player_score < dealer_score:
+                print("Dealer vinner!")
+            else:
+                print("Det blev lika!")
+
+För att kunna avgöra och meddela resultatet av varje spel baserat på de beräknade värderna av handen. Koden ska liksom spegla reglerna för att vinna i blackjack då högsta värdet, under eller lika med 21 vinner men om dealern har över 21 så förlorar de automatiskt.
+
+play_again = input("Vill du spela igen? (Ja/Nej): ").lower()
+        if play_again != 'ja':
+            break
+
+            Jag använde denna koden för att simpelt kunna låta den som spelare bestämma om de vill spela en omgång till eller om de vill avsluta spelet 
+
+            Detta gjorde jag enkelt med "if" loopen jag skapade där om spelaren inte svarar "ja" avslutas loopen och spelet tar slut.
+
+
+
+
+
+
 
 
 

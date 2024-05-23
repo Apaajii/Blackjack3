@@ -54,7 +54,7 @@ def play_blackjack():
                 print("Din hand:")
                 for card in player_hand:
                     print(card[0])
-            elif action == 's':
+            elif action == 's':   
                 break
             else:
                 print("Invalid input! Var snäll och välj 'h' för att ta eller 's' för att stanna.")
